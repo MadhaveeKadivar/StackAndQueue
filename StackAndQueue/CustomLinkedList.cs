@@ -40,6 +40,17 @@ namespace StackAndQueue
                 temp.next = newNode; // Add new Node at last
             }
             this.top = this.head;
-        }        
+        }
+        public void DeleteAtFirst() // creating generic method to delete element at first of linked list
+        {
+            if (this.head == null) //Checking that list is empty or not
+            {
+                return;
+            }
+            Node<T> temp = this.head; // Creating a temp node having head reference
+
+            this.head = this.head.next;  // Deleting a first node  
+            this.top = this.head;
+        }
     }
 }
